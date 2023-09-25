@@ -1,6 +1,11 @@
 import os
 
 
+def bytes_str(buffer: bytes) -> str:
+    """Decode bytes into a utf-8 string."""
+    return str(buffer, "utf-8")
+
+
 def get_env(key: str, default=None, cast=None) -> str | int:
     """Gets an environment variable.
 
@@ -19,3 +24,8 @@ def get_env(key: str, default=None, cast=None) -> str | int:
         return value.lower() == "true"
     else:
         return cast(value) if cast else value
+
+
+def mac_str(buffer: bytearray) -> str:
+    """Converts a MAC address bytearray into the familiar string format."""
+    return ":".join(reversed([hex(i).lstrip("0x") for i in buffer]))
