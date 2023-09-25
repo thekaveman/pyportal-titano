@@ -1,0 +1,9 @@
+__pycache__
+.fseventsd
+$RECYCLE.BIN
+lib
+System Volume Information
+.metadata_never_index
+.Trashes
+boot_out.txt
+settings.toml
