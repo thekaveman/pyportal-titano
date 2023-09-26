@@ -2,4 +2,7 @@ import supervisor
 
 from app.util import get_env
 
-supervisor.runtime.autoreload = get_env("AUTO_RELOAD", default=False, cast=bool)
+auto_reload = get_env("AUTO_RELOAD", default=False, cast=bool)
+supervisor.runtime.autoreload = auto_reload
+
+print("Booting up with auto_reload:", auto_reload)
