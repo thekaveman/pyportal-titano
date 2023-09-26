@@ -1,0 +1,8 @@
+# App configuration
+AUTO_RELOAD="True"
+DEBUG="True"
+
+# Wifi configuration
+WIFI_SCAN="True"
+WIFI_SSID="ssid"
+WIFI_PASSWORD="p@$$wORd!"
