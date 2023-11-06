@@ -1,6 +1,10 @@
-from app import wifi
+from app import logging, wifi
 from app.board import print_pins
 from app.util import get_env
+
+logger = logging.configure(__name__)
+
+logger.info("Main program starting")
 
 debug_mode = get_env("DEBUG", True, bool)
 if debug_mode:
@@ -13,3 +17,5 @@ if should_scan:
     wifi.scan()
 
 wifi.connect()
+
+logger.info("Main program complete")
