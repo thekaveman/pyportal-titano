@@ -4,8 +4,8 @@
     {
       "label": "sync",
       "type": "shell",
-      "command": ".vscode/sync.cmd",
-      "args": ["D:\\"],
+      "command": ".vscode/sync.sh",
+      "args": ["/media/kegan/CIRCUITPY"],
       "presentation": {
         "echo": false,
         "reveal": "silent",
